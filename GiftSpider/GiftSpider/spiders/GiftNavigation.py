@@ -25,7 +25,7 @@ class GiftSpieder(scrapy.Spider):
                         "//div[@class='liwu_box c%s mb20']//ul[@class='clearfix']//li[%s]//div[1]//div[2]/a" % (
                                 i, index)):
                     tag = item.xpath("./span/text()").extract_first()
-                    tag_url = self.host_url + item.xpath("./@href").extract_first()git
+                    tag_url = self.host_url + item.xpath("./@href").extract_first()
                     category = GiftCategoryItem()
                     category['category'] = category_name
                     category['sub_category'] = sub_category
